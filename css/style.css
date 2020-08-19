@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
+
+
+:root {
+  --first-color: #29ca8e;
+  --second-color: #ffab34;
+  --third-color: #f03164;
+  --fourth-color: #3380c5;
+}
+
+
+body {
+  min-height: 75rem;
+  padding-top: 4.2rem;  /* not apply to navbar because it has position fixed */
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+@media (max-width: 990px) {
+  .container{
+    max-width: 970px;
+  }
+}
+
+
+
+/*---------------------------------------
+   TYPOGRAPHY
+-----------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  line-height: inherit;
+}
+
+h1 {
+  color: #252525;
+  font-size: 3em;
+  line-height: normal;
+}
+
+h2 {
+  color: #353535;
+  font-size: 1.8em;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+
+
+@media (max-width: 770px) {
+  h1{
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+
+
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #000000;
+  }
+
+  .section-title {
+    padding-bottom: 40px;
+  }
+
+  .section-title h2 {
+    margin: 0;
+  }
+
+  .section-title small {
+    display: block;
+  }
+
+  .overlay {
+    background: rgba(20,20,20,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .entry-form {
+    background: #252020;
+    border-radius: 100%;
+    text-align: center;
+    padding: 6em;
+    width: 450px;
+    height: 450px;
+  }
+
+  .entry-form h2 {
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .entry-form .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+  .entry-form .submit-btn {
+    background: #ffffff;
+    border-radius: 50px;
+    border: 0;
+    color: #252020;
+    width: 50%;
+    height: 50px;
+    margin: 30px auto;
+    margin-bottom: 10px;
+  }
+
+  .entry-form .submit-btn:hover {
+    background: #3f51b5;
+    color: #ffffff;
+  }
+
+  section {
+    position: relative;
+    padding: 40px 0;
+  }
+
+  #team{
+    background: #f3f3f3;
+  }
+
+  #team,
+  #testimonial {
+    text-align: center;
+  }
+
+  #google-map iframe {
+    border: 0;
+    width: 100%;
+    height: 390px;
+  }
+
+
+
+
+
+
+
+
+
+
+  /*---------------------------------------
+       PRE LOADER
+  -----------------------------------------*/
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+  }
+
+  .spinner {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 1px solid #575757;
+    border-top-color: #ffffff;
+    animation: spinner .9s linear infinite;
+  }
+
+  @-webkit-@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+
+
+
+
+/* CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 38rem;
+  background-color: #777;
+  overflow: hidden;
+}
+
+.carousel-item .container {
+  height: 100%;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.custom-carousel-caption {
+  z-index: 10;
+  position: absolute;
+  left: 1rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  max-width: 64%;
+  text-align: left;
+  color: #fff;
+  width: 500px;
+}
+
+.custom-carousel-caption h1 {
+  color: #222;
+  text-shadow: 0px 1px 1px #888;
+}
+
+.custom-carousel-caption p {
+  color: #222;
+}
+
+
+.custom-carousel-caption .section-btn {
+  text-shadow: none;
+  color: #fff;
+  background-color: var(--third-color);
+  /* font-weight: bold; */
+  /* text-shadow: 0px 0px 1px #aaa; */
+  /* border: 1px solid var(--first-color); */
+  border: none;
+}
+
+.custom-carousel-caption .section-btn:hover {
+  background-color: #ed0543;
+  /* background-color: #3cdda2; */
+}
+
+.custom-carousel-caption p {
+  font-size: 1.2rem;
+}
+
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  font-size: 1.8rem;
+  color: #656565;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.first-slide {
+  background: url("../res/img/dentist2.1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.second-slide {
+  background: url("../res/img/dentist1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.third-slide {
+  background: url("../res/img/engin-akyurt-WQ5fGfFHGZ0-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+
+
+/* responisve css */
+
+@media (min-width: 990px) {
+  /* Bump up size of carousel content */
+  .custom-carousel-caption p {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+
+@media (max-width: 1450px) {
+  .carousel-item .container {
+    height: 100%;
+    position: relative;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .custom-carousel-caption {
+    margin-left: 115px;
+  }
+}
+
+
+@media (max-width: 990px) {
+  .custom-carousel-caption {
+    margin-left: 0;
+      left: 24%;
+  }
+}
+
+@media (max-width: 770px) {
+
+  .carousel-item {
+    height: 80vh;
+    overflow: hidden;
+  }
+
+  .first-slide {
+    background: linear-gradient(#88888866, #88888866), url("../res/img/dentist2.1.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .custom-carousel-caption {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    color: #fff;
+    /* text-shadow: 2px 2px 3px #444; */
+  }
+
+  .custom-carousel-caption h1 {
+    /* color: #fff; */
+  }
+
+  .custom-carousel-caption p {
+    margin-bottom: 1.5rem;
+    font-szie: 1.2rem;
+  }
+
+  .custom-carousel-caption .section-btn {
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+
+
+
+
+
+/*---------------------------------------
+   BUTTONS
+-----------------------------------------*/
+
+.section-btn {
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #555;
+  color: #555;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 12px 30px;
+  transition: 0.5s;
+}
+
+.section-btn:hover {
+  background: var(--forth-color);
+  border-color: transparent;
+  color: #fff;
+}
+
+
+
+
+/* ABOUT US
+----------- */
+.description {
+  margin-bottom: 3rem;
+}
+
+.service_list {
+  text-align: center;
+}
+
+.service-item {
+  min-height: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-circle {
+  background-color: var(--fourth-color);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-circle img {
+  max-height: 100%;
+  padding: 1rem;
+}
+
+.service-circle a {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.service-item-body {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-item-body h2 {
+  line-height: 2.4rem;
+}
+
+
+
+@media (max-width: 770px) {
+  .service-item {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    max-width: 400px;
+    min-height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+
+  .service-item-body {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 570px) {
+  .service-item-body {
+    height: auto;
+  }
+}
+
+
+
+
+  /*---------------------------------------
+      TEAM
+  -----------------------------------------*/
+
+
+  .team-card {
+    /* margin: 24px 20px; */
+  }
+
+  .team-thumb {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    /* text-align: left; */
+  }
+
+  .team-info {
+    padding: 20px 30px;
+  }
+
+  .team-image {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .team-image img {
+    width: 280px;
+  }
+
+  .team-thumb .social-icon {
+    border-top: 1px solid #f0f0f0;
+    padding: 4px 20px 0 20px;
+  }
+
+  .team-thumb .social-icon li a {
+    background: #ffffff;
+    color: #252020;
+  }
+
+  .team-info h3 {
+    margin: 0;
+  }
+
+  .description {
+    margin-top: 32px;
+    text-align: left;
+  }
+
+  #team .description {
+    text-align: left;
+  }
+
+  .teammail {
+    display: inline-block;
+    padding-top: 6px;
+    font-style: italic;
+  }
+
+
+
+
+
+
+  .testimonial-section {
+    display: none;
+    padding: 0;
+    padding-top: 3rem;
+  }
+
+  .testimonial-section .carousel {
+    margin-bottom: 2rem;
+  }
+
+  .testimonial-section .carousel-item {
+    background-color: inherit;
+  }
+
+  .testimonial-section .section-title {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .testimonial-section .card {
+    border: 0;
+  }
+
+  .testimonial-section .carousel-caption {
+    text-align: left;
+  }
+
+  .card .carousel-item {
+    height: 120px;
+  }
+
+  .card .carousel-caption {
+    padding: 0;
+    left: 0;
+    color: #3d3d3d;
+  }
+
+  .card .carousel-caption h3 {
+    color: #3d3d3d;
+  }
+
+  .card .carousel-caption p {
+    line-height: 30px;
+  }
+
+  .card .carousel-caption .col-sm-3 {
+    display: flex;
+    align-items: center;
+  }
+
+  .card .carousel-caption .col-sm-9 {
+    text-align: left;
+  }
+
+  .navi a {
+      text-decoration:none;
+  }
+
+  a > .ico {
+      background-color: grey;
+      padding: 10px;
+  }
+
+  a:hover > .ico {
+      background-color: #666;
+  }
+
+
+
+
+
+
+
+
+
+  /*---------------------------------------
+      CONTACT
+  -----------------------------------------*/
+
+  #contact {
+    background: var(--fourth-color);
+    padding-top: 60px;
+  }
+
+  #contact h2 {
+    color: #ffffff;
+  }
+
+  #contact .section-title {
+    padding-bottom: 20px;
+  }
+
+  #contact h2 > small,
+  #contact p,
+  #contact a {
+    color: #f9f9f9;
+  }
+
+  #contact-form {
+    padding: 1em 0;
+  }
+
+  #contact-form .col-md-12,
+  #contact-form .col-md-4 {
+    padding-left: 0;
+  }
+
+  #contact-form .form-control {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    margin: 10px 0;
+  }
+
+  #contact-form input {
+    height: 50px;
+  }
+
+  .contact-image {
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-image img {
+    max-height: 450px;
+  }
+
+  #contact .btn {
+    background-color: var(--fourth-color);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+
+  #contact .btn:hover {
+    background-color: #ed0543;
+  }
+
+
+
+@media (max-width: 770px) {
+  .contact-image {
+    height: 360px;
+  }
+
+  .contact-image img {
+    max-height: 100%;
+  }
+
+}
+
+
+  /*---------------------------------------
+     FOOTER
+  -----------------------------------------*/
+
+  footer {
+    background: #252020;
+    padding: 120px 0;
+  }
+
+  footer .section-title {
+    padding-bottom: 10px;
+  }
+
+  footer h2 {
+    font-size: 20px;
+  }
+
+  footer a,
+  footer p {
+    color: #909090;
+  }
+
+  footer strong {
+    color: #d9d9d9;
+  }
+
+  footer address p {
+    margin-bottom: 0;
+  }
+
+  footer .social-icon {
+    margin-top: 16px;
+  }
+
+  .footer-info {
+    margin-right: 2em;
+  }
+
+  .footer-info h2 {
+    color: #ffffff;
+    padding: 0;
+  }
+
+  .footer_menu h2 {
+    /* margin-top: 2em; */
+  }
+
+  .footer_menu ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer_menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 10px 5px 0;
+  }
+
+  .newsletter-form .form-control {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid #303030;
+    height: 50px;
+    margin: 5px 0;
+  }
+
+  .newsletter-form input[type="submit"] {
+    background: transparent;
+    border: 1px solid #f9f9f9;
+    border-radius: 50px;
+    color: #ffffff;
+    display: block;
+    margin-top: 20px;
+    outline: none;
+    width: 50%;
+  }
+
+  .newsletter-form input[type="submit"]:hover {
+    background: #29ca8e;
+    border-color: transparent;
+  }
+
+  .newsletter-form .form-group span {
+    color: #909090;
+    display: block;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  footer .copyright-text {
+    margin-top: 4rem;
+    padding: 1rem 0;
+    border-top: 1px solid #888;
+  }
+
+
+
+  /*---------------------------------------
+     SOCIAL ICON
+  -----------------------------------------*/
+
+  .social-icon {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-icon li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 5px;
+  }
+
+  .social-icon li a {
+    border-radius: 100px;
+    color: #29ca8e;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    margin: 5px 5px 5px 0;
+  }
+
+  .social-icon li a:hover {
+    background: #29ca8e;
+    color: #ffffff;
+  }

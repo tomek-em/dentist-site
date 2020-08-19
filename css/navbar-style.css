@@ -1,0 +1,149 @@
+
+
+
+/* Navbar Toggle button */
+
+.navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  margin-right: 1rem;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler .icon-bar {
+    width: 26px;
+    height: 2px;
+    margin: 3px 0;
+    border-radius: 1px;
+    background-color: #111;
+  }
+
+
+
+
+.navbar {
+  padding: 0;
+  font-size: 0.9rem;
+  border-top: 5px solid var(--fourth-color);
+  box-shadow: 0px 1px 1px #eee;
+}
+
+.main-nav {
+  align-items: center;
+}
+
+.nav-item {
+  min-width: 100px;
+  min-height: 72px;
+  text-align: center;
+  padding: 0;
+  /* padding: 24px 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item a {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block;
+  padding: 24px 1rem;
+  cursor: pointer; */
+}
+
+.nav-custom-black .nav-item .nav-link {
+  color: #111;
+}
+
+.main-nav .nav-item:hover,
+.main-nav .nav-item.active {
+  background-color: var(--fourth-color);
+}
+
+
+/* nav-eleemnt */
+
+.nav-element {
+  width: 180px;
+  padding: 0;
+}
+
+.nav-element-right .navbar-nav {
+  margin-left: auto;
+}
+
+.nav-element-right .nav-item {
+  padding: 0;
+}
+
+.nav-element-right a {
+  font-size: 1.0rem;
+  padding: 1rem 0;
+  margin-right: 0;
+}
+
+.nav-element i {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  background-color: var(--third-color);
+  width: 32px;
+  height: 32px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.logo {
+  height: 32px;
+}
+
+
+
+
+@media (max-width: 990px) {
+  .nav-item {
+    min-width: 80px;
+  }
+  .nav-element{
+    width: 145px;
+    padding: 0;
+  }
+  .nav-element-right a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 766px) {
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .nav-item a {
+    min-width: 90%;
+  }
+
+  .navbar .nav-element {
+    padding: 0 1rem;
+  }
+
+  .nav-element-right .navbar-nav a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-item,
+  .nav-element-right {
+    width: 100%;
+  }
+}
