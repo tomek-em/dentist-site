@@ -231,7 +231,7 @@ h3 {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 38rem;
+  height: 40rem;
   background-color: #777;
   overflow: hidden;
   position: relative;
