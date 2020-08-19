@@ -91,6 +91,7 @@
   font-size: 1.0rem;
   padding: 1rem 0;
   margin-right: 0;
+  cursor: default;
 }
 
 .nav-element i {

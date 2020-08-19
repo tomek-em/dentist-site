@@ -4,7 +4,8 @@
 :root {
   --first-color: #29ca8e;
   --second-color: #ffab34;
-  --third-color: #f03164;
+  /* --third-color: #f03164; */
+  --third-color: #29ca8e;
   --fourth-color: #3380c5;
 }
 
