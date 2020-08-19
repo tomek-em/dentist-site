@@ -1,2 +1,2 @@
 # dentist-site
-Dentist site template
+Template for dentist website. I used bootstrap and jquery with smoothscroll.
