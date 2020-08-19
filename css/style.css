@@ -234,6 +234,7 @@ h3 {
   height: 38rem;
   background-color: #777;
   overflow: hidden;
+  position: relative;
 }
 
 .carousel-item .container {
@@ -243,7 +244,7 @@ h3 {
 }
 
 .custom-carousel-caption {
-  z-index: 10;
+  z-index: 20;
   position: absolute;
   left: 1rem;
   bottom: 50%;
@@ -268,9 +269,6 @@ h3 {
   text-shadow: none;
   color: #fff;
   background-color: var(--third-color);
-  /* font-weight: bold; */
-  /* text-shadow: 0px 0px 1px #aaa; */
-  /* border: 1px solid var(--first-color); */
   border: none;
 }
 
@@ -281,14 +279,6 @@ h3 {
 
 .custom-carousel-caption p {
   font-size: 1.2rem;
-}
-
-
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -304,26 +294,14 @@ h3 {
   height: 100%;
 }
 
-.first-slide {
-  background: url("../res/img/dentist2.1.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
+.carousel-item img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  transform: translate(-50%, 0);
 }
 
-.second-slide {
-  background: url("../res/img/dentist1.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.third-slide {
-  background: url("../res/img/engin-akyurt-WQ5fGfFHGZ0-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
 /* MARKETING CONTENT
@@ -348,7 +326,6 @@ h3 {
 /* responisve css */
 
 @media (min-width: 990px) {
-  /* Bump up size of carousel content */
   .custom-carousel-caption p {
     margin-bottom: 2rem;
     font-size: 1.25rem;
@@ -389,12 +366,17 @@ h3 {
     overflow: hidden;
   }
 
-  .first-slide {
+  .carousel-item img {
+    height: 100vh;
+    width: auto;
+  }
+
+  /* .first-slide {
     background: linear-gradient(#88888866, #88888866), url("../res/img/dentist2.1.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
 
   .custom-carousel-caption {
     left: 50%;
@@ -402,11 +384,6 @@ h3 {
     transform: translate(-50%, 50%);
     text-align: center;
     color: #fff;
-    /* text-shadow: 2px 2px 3px #444; */
-  }
-
-  .custom-carousel-caption h1 {
-    /* color: #fff; */
   }
 
   .custom-carousel-caption p {
@@ -421,7 +398,6 @@ h3 {
     border-color: #fff;
   }
 }
-
 
 
 
