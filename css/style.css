@@ -381,7 +381,7 @@ h3 {
   }
 
   #first_img {
-    margin-left: 324px;
+    margin-left: 200px;
   }
 
   .custom-carousel-caption {
@@ -405,6 +405,12 @@ h3 {
   }
 }
 
+
+@media (max-width: 600px) {
+  #first_img {
+    margin-left: 340px;
+  }
+}
 
 
 
