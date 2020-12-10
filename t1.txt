@@ -1,3 +1,0 @@
-new test file
-local edt,
-extra github edt
